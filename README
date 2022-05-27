@@ -1,0 +1,14 @@
+
+Pour executer vous devez:
+-activer l'environnement de developpement python
+-diriger vous vers le dossier AST depuis l'invite de commande
+-entrer "py manage.py makemigrations"
+-entrer "py manage.py migrate"
+-entrer "py manage.py createsuperuser": celui ci servira à consulter l'administration django au besoin à l'adresse http://127.0.0.1:8000/admin/
+-entrer "py manage.py runserver": pour entrer activer le serveur et acceder au site depuis http://127.0.0.1:8000/
+
+
+Les pages disponibles sont:
+http://127.0.0.1:8000/config/
+http://127.0.0.1:8000/contact/
+http://127.0.0.1:8000/validation/ : celle ci est est la page de redirection apres une requete de collecte executée

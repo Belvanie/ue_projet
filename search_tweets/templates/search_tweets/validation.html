@@ -1,0 +1,20 @@
+
+    {% include 'search_tweets/messages.html' %}
+    <a href="{% url 'config' %}">Demande d'extraction</a>
+    <h3>Extraction reussie</h3>
+    <ol>
+        {% for tweet in tweets %}
+            <li>
+                <ul>
+                    <li> ID de l'auteur : {{ tweet.author_id }}</li><br>
+                    <li> Message : {{ tweet.text }}</li><br>
+                    <li> Date de publication : {{ tweet.created_at }}</li><br>
+                    {% if tweet.polarity == 1%}
+                        <li> Sentiment : positif</li><br>
+                    {% else %}
+                        <li> Sentiment : negatif</li><br>
+                    {% endif %}
+                </ul>
+            </li><hr><br>
+        {% endfor %}
+    </ol>
